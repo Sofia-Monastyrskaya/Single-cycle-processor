@@ -31,28 +31,24 @@ object FullAdderSim extends App {
       dut.io.a_i     #= false
       dut.io.b_i     #= false
       dut.io.carry_i #= false
-      //dut.clockDomain.waitSampling()
       sleep(1)
       println(s"a=0 b=0 cin=0 -> sum=${dut.io.sum_o.toBoolean} carry=${dut.io.carry_o.toBoolean}")
 
       dut.io.a_i     #= false
       dut.io.b_i     #= true
       dut.io.carry_i #= false
-     // dut.clockDomain.waitSampling()
       sleep(1)
       println(s"a=0 b=1 cin=0 -> sum=${dut.io.sum_o.toBoolean} carry=${dut.io.carry_o.toBoolean}")
 
       dut.io.a_i     #= true
       dut.io.b_i     #= false
       dut.io.carry_i #= false
-     // dut.clockDomain.waitSampling()
       sleep(1)
       println(s"a=1 b=0 cin=0 -> sum=${dut.io.sum_o.toBoolean} carry=${dut.io.carry_o.toBoolean}")
 
       dut.io.a_i     #= true
       dut.io.b_i     #= true
       dut.io.carry_i #= false
-     // dut.clockDomain.waitSampling()
       sleep(1)
       println(s"a=1 b=1 cin=0 -> sum=${dut.io.sum_o.toBoolean} carry=${dut.io.carry_o.toBoolean}")
 
