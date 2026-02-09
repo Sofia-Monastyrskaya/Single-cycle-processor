@@ -4,8 +4,6 @@ import spinal.core._
 import spinal.sim._
 import spinal.core.sim._
 
-//import scala.language.postfixOps
-
 case class FullAdder() extends Component {
   val io = new Bundle {
     val a_i     =   in Bool()
