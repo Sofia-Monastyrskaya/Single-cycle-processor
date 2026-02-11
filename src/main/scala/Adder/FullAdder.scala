@@ -4,11 +4,12 @@ import spinal.core._
 import spinal.sim._
 import spinal.core.sim._
 
+
 case class FullAdder() extends Component {
   val io = new Bundle {
-    val a_i     =   in Bool()
-    val b_i     =   in Bool()
-    val carry_i =   in Bool()
+    val a_i     =   in  Bool()
+    val b_i     =   in  Bool()
+    val carry_i =   in  Bool()
     val sum_o   =   out Bool()
     val carry_o =   out Bool()
   }
@@ -49,12 +50,13 @@ object FullAdderSim extends App {
       dut.io.carry_i #= false
       sleep(1)
       println(s"a=1 b=1 cin=0 -> sum=${dut.io.sum_o.toBoolean} carry=${dut.io.carry_o.toBoolean}")
-
     }
 }
+
+
 
 object FullAdderVerilog extends App {
   SpinalConfig(
     targetDirectory = "rtl"
-  ).generateVerilog(FullAdder())
+  ).generateSystemVerilog(FullAdder())
 }
