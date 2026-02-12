@@ -1,0 +1,9 @@
+package Memory
+
+object MemPkg {
+  val INSTR_MEM_SIZE_BYTES = 512
+  val INSTR_MEM_SIZE_WORDS = INSTR_MEM_SIZE_BYTES / 4
+
+  val DATA_MEM_SIZE_BYTES = 512
+  val DATA_MEM_SIZE_WORDS = DATA_MEM_SIZE_BYTES / 4
+}
