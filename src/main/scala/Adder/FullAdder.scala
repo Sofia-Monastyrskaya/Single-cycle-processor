@@ -17,7 +17,6 @@ case class FullAdder() extends Component {
   io.carry_o := (io.a_i & io.b_i)     |
                 (io.a_i & io.carry_i) |
                 (io.b_i & io.carry_i)
-
 }
 
 object FullAdderVerilog extends App {
