@@ -4,14 +4,13 @@ import spinal.core._
 
 case class RegisterFile() extends Component {
   val io = new Bundle {
-    val clk_i = in Bool()
     val write_enable_i = in Bool()
-    val write_addr_i = in Bits(5 bits)
-    val read_addr1_i = in Bits(5 bits)
-    val read_addr2_i = in Bits(5 bits)
-    val write_data_i = in Bits(32 bits)
-    val read_data1_o = out Bits(32 bits)
-    val read_data2_o = out Bits(32 bits)
+    val write_addr_i   = in Bits(5 bits)
+    val read_addr1_i   = in Bits(5 bits)
+    val read_addr2_i   = in Bits(5 bits)
+    val write_data_i   = in Bits(32 bits)
+    val read_data1_o   = out Bits(32 bits)
+    val read_data2_o   = out Bits(32 bits)
   }
 
   val RAM = Vec(Reg(Bits(32 bits)) init (0), 32)
