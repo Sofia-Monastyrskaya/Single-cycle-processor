@@ -32,5 +32,7 @@ object FullAdderSim extends App {
       dut.io.carry_i #= false
       sleep(1)
       println(s"a=1 b=1 cin=0 -> sum=${dut.io.sum_o.toBoolean} carry=${dut.io.carry_o.toBoolean}")
+
+      simSuccess()
     }
 }

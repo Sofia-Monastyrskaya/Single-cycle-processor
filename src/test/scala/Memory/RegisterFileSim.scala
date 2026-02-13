@@ -37,5 +37,7 @@ object RegisterFileSim extends App{
         dut.io.read_addr1_i #= 0
         dut.clockDomain.waitSampling()
         println(s"Read reg0 = ${dut.io.read_data1_o.toInt}")
+
+        simSuccess()
     }
 }

@@ -104,5 +104,7 @@ object AluSim extends App{
     dut.io.alu_op_i #= AluOpcodes.SLTU
     sleep(1)
     println(s"SLTU: result=${dut.io.result_o.toBigInt}")
+
+    simSuccess()
   }
 }

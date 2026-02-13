@@ -16,5 +16,7 @@ object InstrMemSim extends App{
             dut.clockDomain.waitRisingEdge()
             println(f"Read addr $addr: 0x${dut.io.read_data_o.toLong}%08X")
         }
+        
+        simSuccess()
     }
 }

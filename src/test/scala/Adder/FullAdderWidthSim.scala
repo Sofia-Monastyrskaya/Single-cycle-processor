@@ -19,5 +19,7 @@ object FullAdderWidthSim extends App {
             s"sum=${dut.io.sum_o.toBigInt} " +
             s"carry_o=${dut.io.carry_o.toBoolean}"
         )
+
+        simSuccess()
     }
 }
